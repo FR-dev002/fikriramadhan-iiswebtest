@@ -1,0 +1,129 @@
+// table
+.dash-table {
+    width: 100%;
+    text-align: left;
+    height: 100%;
+}
+
+.list-headers {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 0%;
+}
+
+.list-headers>div:nth-child(1) {
+    width: 90px;
+}
+
+.list-headers>div:nth-child(2) {
+    width: 180px;
+}
+
+.list-headers>div:nth-child(3) {
+    width: 285px;
+}
+
+.list-headers>div:nth-child(4) {
+    width: 292px;
+}
+
+.list-body {
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.list-body>.body>div:nth-child(1) {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-left: 35px;
+}
+
+.list-body>.body>div:nth-child(2) {
+    margin-left: 22px;
+    width: 180px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.list-body>.body>div:nth-child(3) {
+    width: 285px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.list-body>.body>div:nth-child(4) {
+    width: 292px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.list-body>.body>div:nth-child(5) {
+    width: 292px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+// Animation
+@-webkit-keyframes slideup {
+    from {
+        margin-top: 100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+@-moz-keyframes slideup {
+    from {
+        margin-top: 100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+@-o-keyframes slideup {
+    from {
+        margin-top: 100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+@keyframes slideup {
+    from {
+        margin-top: 100%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+$columns: 6;
+@for $i from 1 through $columns {
+    .body-#{$i} {
+        /* for chrome and safari*/
+        -webkit-animation-duration: $i * 550ms;
+        -webkit-animation-name: slideup;
+        /*for firefox*/
+        -moz-animation-duration: $i * 550ms;
+        -moz-animation-name: slideup;
+        /* for opera*/
+        -o-animation-duration: $i * 550ms;
+        -o-animation-name: slideup;
+        /* Standard syntax*/
+        animation-duration: $i * 550ms;
+        animation-name: slideup;
+    }
+}
