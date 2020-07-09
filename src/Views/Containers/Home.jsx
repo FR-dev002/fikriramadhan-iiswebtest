@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import TitleHeader from "../Components/Text/Title";
 import LargeCard from "../Components/Card/LargeCard";
+import Loading from "../Components/Loading";
 import DashboardTable from "../Components/DashboardTable/DashboardTable";
 
 const Home = (props) => {
@@ -16,7 +17,7 @@ const Home = (props) => {
   return (
     <Fragment>
       {loading ? (
-        ""
+        <Loading />
       ) : (
         <div id="wrapper">
           {/* 

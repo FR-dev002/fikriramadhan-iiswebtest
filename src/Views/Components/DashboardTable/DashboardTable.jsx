@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import LabelTable from './DashboardTable';
+import LabelTable from './LabelTable';
 import './DashboardTable.scss'
 import Checkbox from '../Checkbox/Checkbox';
 import TableHooks from '../../../Hooks/TableHooks/CheckBox';
